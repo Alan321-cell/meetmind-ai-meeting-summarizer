@@ -1,0 +1,33 @@
+from app.schemas.meeting import (
+    ActionItemBase,
+    ActionItemCreate,
+    ActionItemUpdate,
+    ActionItemResponse,
+    TranscriptSegment,
+    DiscussionPoint,
+    ExtractedActionItem,
+    MeetingAnalysisResult,
+    MeetingListItemResponse,
+    MeetingDetailResponse,
+    MeetingUploadResponse,
+    MeetingUpdateRequest,
+    HealthResponse,
+    StatsResponse,
+)
+
+__all__ = [
+    "ActionItemBase",
+    "ActionItemCreate",
+    "ActionItemUpdate",
+    "ActionItemResponse",
+    "TranscriptSegment",
+    "DiscussionPoint",
+    "ExtractedActionItem",
+    "MeetingAnalysisResult",
+    "MeetingListItemResponse",
+    "MeetingDetailResponse",
+    "MeetingUploadResponse",
+    "MeetingUpdateRequest",
+    "HealthResponse",
+    "StatsResponse",
+]
