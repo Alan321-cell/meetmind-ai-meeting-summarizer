@@ -57,14 +57,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenUpload, onOpenDemo, isDemo
 
           <div className="flex items-center gap-1 text-slate-400">
             <Cpu className="w-3.5 h-3.5 text-sky-400" />
-            <span>ASR: <strong className="text-slate-200 uppercase">{health?.asr_provider || 'Whisper'}</strong></span>
+            <span>ASR: <strong className={`uppercase ${health?.asr_provider === 'mock' ? 'text-amber-300' : 'text-slate-200'}`}>{health?.asr_provider === 'mock' ? 'Offline Engine' : health?.asr_provider || 'Whisper'}</strong></span>
           </div>
 
           <span className="text-slate-700">|</span>
 
           <div className="flex items-center gap-1 text-slate-400">
             <Sparkles className="w-3.5 h-3.5 text-brand-400" />
-            <span>LLM: <strong className="text-slate-200 uppercase">{health?.llm_provider || 'Auto'}</strong></span>
+            <span>LLM: <strong className={`uppercase ${health?.llm_provider === 'mock' ? 'text-amber-300' : 'text-slate-200'}`}>{health?.llm_provider === 'mock' ? 'Offline Engine' : health?.llm_provider || 'Auto'}</strong></span>
           </div>
         </div>
 
