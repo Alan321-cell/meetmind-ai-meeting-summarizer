@@ -41,8 +41,6 @@ Structured breakdown of conversation highlights and technical consensus:
 Timestamped speaker turns, continuous text toggle, and search filter:
 ![Transcript Dialogue](docs/screenshots/07_transcript_dialogue.png)
 
----
-
 ## 🎥 Demo Video & Walkthrough
 
 A complete, high-resolution end-to-end walkthrough video demonstrating:
@@ -53,10 +51,15 @@ A complete, high-resolution end-to-end walkthrough video demonstrating:
 - Interacting with action items and toggling completion status
 - Timestamped dialogue searching and transcript exports
 
-The video recording file is included directly in the repository at:
-`docs/meetmind_demo_walkthrough.webm`
+<p align="center">
+  <video src="docs/meetmind_demo_walkthrough.webm" width="100%" controls="controls" preload="metadata">
+    Your browser does not support the video tag.
+  </video>
+</p>
 
-*To watch or share: Open `docs/meetmind_demo_walkthrough.webm` in any modern web browser or video player, or upload it to Google Drive / YouTube as per assignment submission preferences.*
+🎬 **[▶️ Click here to open/download the Demo Video Walkthrough](docs/meetmind_demo_walkthrough.webm)**
+
+*The video recording file is stored directly in the repository at `docs/meetmind_demo_walkthrough.webm` and is ready for offline playback in any browser or media player, as well as uploading to your submission portal.*
 
 ---
 
