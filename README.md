@@ -240,7 +240,7 @@ MeetMind — AI Meeting Summarizer/
 ### Step 1 — Clone the Repository
 
 ```bash
-git clone https://github.com/alanp/meetmind-ai-meeting-summarizer.git
+git clone https://github.com/Alan321-cell/meetmind-ai-meeting-summarizer.git
 cd meetmind-ai-meeting-summarizer
 ```
 
