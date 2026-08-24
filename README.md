@@ -11,17 +11,66 @@
 
 ---
 
+## 📸 User Interface & Screenshots
+
+### 1. Meeting Intelligence Dashboard
+Overview of all processed meetings, aggregated analytics metrics, and search/filter controls:
+![Dashboard](docs/screenshots/01_dashboard.png)
+
+### 2. Audio Ingestion & Format Validation
+Drag-and-drop audio uploader supporting MP3, WAV, M4A, WebM, MP4, FLAC up to 100MB:
+![Upload Modal](docs/screenshots/02_upload_modal.png)
+
+### 3. Executive Intelligence Summary & Web Player
+Executive briefing, detailed markdown minutes, and embedded audio player with speed controls:
+![Meeting Summary](docs/screenshots/03_meeting_summary.png)
+
+### 4. Key Decisions & Consensus
+Clearly distinguished binding decisions with impact indicators:
+![Key Decisions](docs/screenshots/04_decisions.png)
+
+### 5. Interactive Action Items & Deliverables Tracker
+Action items with assignees, deadlines, priority tags, and real-time completion toggles:
+![Action Items](docs/screenshots/05_action_items.png)
+
+### 6. Thematic Discussion Topics
+Structured breakdown of conversation highlights and technical consensus:
+![Discussion Topics](docs/screenshots/06_discussion_topics.png)
+
+### 7. Dialogue Transcript Explorer
+Timestamped speaker turns, continuous text toggle, and search filter:
+![Transcript Dialogue](docs/screenshots/07_transcript_dialogue.png)
+
+---
+
+## 🎥 Demo Video & Walkthrough
+
+A complete, high-resolution end-to-end walkthrough video demonstrating:
+- Opening the dashboard and reviewing meeting metrics
+- Uploading and validating audio files
+- Real-time transcription and structured AI summary extraction
+- Inspecting executive briefs, key decisions, and discussion highlights
+- Interacting with action items and toggling completion status
+- Timestamped dialogue searching and transcript exports
+
+The video recording file is included directly in the repository at:
+`docs/meetmind_demo_walkthrough.webm`
+
+*To watch or share: Open `docs/meetmind_demo_walkthrough.webm` in any modern web browser or video player, or upload it to Google Drive / YouTube as per assignment submission preferences.*
+
+---
+
 ## 🌟 Key Features
 
-- **🎙️ Multi-Format Audio Ingestion**: Upload MP3, WAV, M4A, MP4 Audio, WebM, FLAC, and OGG recordings up to 100MB with automated format and size validation.
-- **⚡ Dual-Engine Whisper ASR**: Supports high-accuracy OpenAI Whisper (`whisper-1`) and ultra-fast Groq Cloud Whisper (`whisper-large-v3`), with automatic offline deterministic fallback for test environments.
-- **🧠 Engineered LLM Intelligence**: Rigorously prompt-engineered natural language synthesis that guarantees zero hallucination of unmentioned names or deadlines.
-- **🎯 Key Decisions Isolation**: Explicitly distinguishes between agreed team decisions and conversational suggestions or proposals.
-- **📋 Action Item Execution Tracker**: Extracts tasks, assignees (or marks *Unassigned*), deadlines (or marks *null*), priority levels (`LOW`, `MEDIUM`, `HIGH`, `CRITICAL`), with interactive completion status toggles.
-- **💬 Dialogue & Segmented Transcripts**: Timestamped speaker segment viewer with instant search filtering, raw text toggle, and one-click export (Markdown, TXT, JSON).
-- **🔊 Built-In Audio Player**: Embedded waveform and audio player with playback speed adjustment (1x, 1.25x, 1.5x, 2x), timeline seeking, and volume control.
-- **📊 Meeting Metrics & Analytics**: Aggregates total meetings, hours of audio transcribed, action item counts, and completion rates.
-- **🧪 Instant Demo Seeder**: One-click demo meeting generator for evaluators to test the full UI without needing an audio file or active API key.
+- **Multi-Format Audio Ingestion**: Upload MP3, WAV, M4A, MP4 Audio, WebM, FLAC, and OGG recordings up to 100MB with automated format and size validation.
+- **Dual-Engine Whisper ASR**: Supports high-accuracy OpenAI Whisper (`whisper-1`) and ultra-fast Groq Cloud Whisper (`whisper-large-v3`), with automatic offline deterministic fallback for test environments.
+- **Engineered LLM Intelligence**: Rigorously prompt-engineered natural language synthesis that guarantees zero hallucination of unmentioned names or deadlines.
+- **Key Decisions Isolation**: Explicitly distinguishes between agreed team decisions and conversational suggestions or proposals.
+- **Action Item Execution Tracker**: Extracts tasks, assignees (or marks *Unassigned*), deadlines (or marks *null*), priority levels (`LOW`, `MEDIUM`, `HIGH`, `CRITICAL`), with interactive completion status toggles.
+- **Dialogue & Segmented Transcripts**: Timestamped speaker segment viewer with instant search filtering, raw text toggle, and one-click export (Markdown, TXT, JSON).
+- **Built-In Audio Player**: Embedded waveform and audio player with playback speed adjustment (1x, 1.25x, 1.5x, 2x), timeline seeking, and volume control.
+- **Meeting Metrics & Analytics**: Aggregates total meetings, hours of audio transcribed, action item counts, and completion rates.
+- **Instant Demo Seeder**: One-click demo meeting generator for evaluators to test the full UI without needing an audio file or active API key.
 
 ---
 
@@ -87,6 +136,9 @@
 
 ```
 MeetMind — AI Meeting Summarizer/
+├── docs/
+│   ├── meetmind_demo_walkthrough.webm    # Full application walkthrough video recording
+│   └── screenshots/                      # High-resolution UI screenshots (01 to 07)
 ├── backend/
 │   ├── app/
 │   │   ├── api/
@@ -119,7 +171,8 @@ MeetMind — AI Meeting Summarizer/
 │   │   ├── main.py                       # FastAPI application entry point & SPA server
 │   │   └── __init__.py
 │   ├── sample_data/
-│   │   └── generate_sample_audio.py      # Synthetic audio test generator
+│   │   ├── generate_sample_audio.py      # Synthetic audio test generator
+│   │   └── sample_meeting.wav            # Sample test audio recording
 │   ├── storage/
 │   │   └── audio/                        # Secure local audio upload directory
 │   ├── tests/
@@ -184,8 +237,8 @@ MeetMind — AI Meeting Summarizer/
 ### Step 1 — Clone the Repository
 
 ```bash
-git clone https://github.com/username/meetmind.git
-cd meetmind
+git clone https://github.com/alanp/meetmind-ai-meeting-summarizer.git
+cd meetmind-ai-meeting-summarizer
 ```
 
 ---
@@ -214,7 +267,7 @@ cd meetmind
    ```bash
    cp .env.example .env
    ```
-   *Edit `.env` to add your OpenAI or Groq API keys. If no key is provided, MeetMind automatically switches to deterministic offline mode for zero-key evaluation.*
+   *Note: If no API key is provided, MeetMind automatically operates in deterministic offline mode for zero-key evaluation.*
 5. Start the FastAPI backend server:
    ```bash
    uvicorn app.main:app --reload --port 8000
@@ -309,7 +362,7 @@ pytest -v
    - Full Dialogue Transcript with timestamped speaker turns
    - Embedded Audio Player with multi-speed controls
 3. **Upload Real Audio**:
-   - Click **"Upload Meeting"**.
+   - Click **"Upload Audio"**.
    - Drag and drop any voice recording (`.mp3`, `.wav`, `.m4a`, etc.).
    - Watch the multi-stage live progress visualizer (`Uploading` ➔ `Whisper ASR Transcription` ➔ `LLM Intelligence Extraction` ➔ `Meeting Ready`).
 4. **Interact with Results**:
