@@ -59,7 +59,7 @@ A complete, high-resolution end-to-end walkthrough video demonstrating:
 
 🎬 **[▶️ Click here to open/download the Demo Video Walkthrough](docs/meetmind_demo_walkthrough.webm)**
 
-*The video recording file is stored directly in the repository at `docs/meetmind_demo_walkthrough.webm` and is ready for offline playback in any browser or media player, as well as uploading to your submission portal.*
+
 
 ---
 
