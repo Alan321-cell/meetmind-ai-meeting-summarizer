@@ -385,13 +385,6 @@ pytest -v
 - **Anti-Hallucination Prompting**: AI prompts explicitly mandate strict factual grounding with null/unassigned fallbacks.
 - **Cascading Deletions**: Deleting a meeting removes database records and purges the audio file from the disk.
 
----
-
-## 📄 Assignment Submission Details
-
-- **Repository**: Public GitHub repository
-- **Branch**: `main`
-- **Cleanliness**: Excludes all `.env`, `node_modules`, `venv`, `dist`, `__pycache__`, `*.db`, and temporary test artifacts.
 
 ---
 
